@@ -20,4 +20,4 @@ Assumed Ubuntu 13.04 "Raring Ringtail". If different, modify repo paths.
     # permanently start puppet
     puppet resource service puppet ensure=running enable=true
     
-Continue with [configure-puppet](httpconfigure-puppet.md)
+Continue with [configure-puppet](configure-puppet.md)
