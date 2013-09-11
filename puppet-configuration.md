@@ -14,4 +14,4 @@ Puppet Configuration
     git clone https://github.com/andrewbrereton/server-config.git
 
     # install the repo's puppet configs
-    ln -s /etc/puppet/puppet ~/puppet
+    ln -s ~/server-config/puppet-modules/manifests/site.php /etc/puppet/manifests/site.php
