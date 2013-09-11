@@ -11,7 +11,7 @@ Puppet Configuration
 
     # get this repo
     cd ~
-    git clone git@github.com:andrewbrereton/server-config.git
+    git clone https://github.com/andrewbrereton/server-config.git
 
     # install the repo's puppet configs
     ln -s /etc/puppet/puppet ~/puppet
