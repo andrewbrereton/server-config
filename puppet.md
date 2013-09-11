@@ -1,5 +1,5 @@
-Puppet
-=======
+Puppet Installation
+===================
 
 I am creating a standalone puppet deployment, not a server/agent deployment type.
 
@@ -20,4 +20,4 @@ Assumed Ubuntu 13.04 "Raring Ringtail". If different, modify repo paths.
     # permanently start puppet
     puppet resource service puppet ensure=running enable=true
     
-Continue with [configure-puppet](configure-puppet.md)
+Continue with [Puppet Configuration](puppet-configuration.md)
