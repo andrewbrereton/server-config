@@ -1,9 +1,13 @@
 class { 'apache': }
+
 class { 'apache::mod::pagespeed':
     domain_names => 'http://andrewbrereton.com https://andrewbrereton.com',
 }
+
 class { 'apache::mod::php': }
+
 apache::mod { 'rewrite': }
+
 apache::vhost { 'andrewbrereton.com':
     priority        => '10',
     port            => '443',
