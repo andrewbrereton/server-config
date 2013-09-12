@@ -18,7 +18,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin
 EJABBERD=/usr/sbin/ejabberd
 EJABBERDCTL=/usr/sbin/ejabberdctl
 EJABBERDRUN=/var/run/ejabberd
-EJABBERDUSER=ejabberd
+EJABBERDUSER=root
 NAME=ejabberd
 
 test -f $EJABBERD || exit 0
