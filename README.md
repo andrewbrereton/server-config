@@ -1,6 +1,8 @@
 Server Config
 =============
 
+This is a quick guide on how I have setup my server.
+
 1. [Base Installation](1-base-installation.md)
 2. [Mail Server](2-mail-server.md)
 3. [Webmail](3-webmail.md)
