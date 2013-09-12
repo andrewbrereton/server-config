@@ -20,7 +20,8 @@ Mail Server
     useradd -m -u 5000 -g 5000 -s /bin/bash vmail
     
     # Add domain
-    echo "andrewbrereton.com" > /etc/postfix/vhosts
+    rm /etc/postfix/vhosts
+    ln -s /root/server-config/files/etc/postfix/vhosts /etc/postfix/vhosts
     
     # Add user
     rm /etc/postfix/vmaps
