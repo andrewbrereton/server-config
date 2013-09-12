@@ -45,6 +45,9 @@ Mail Server
     # Install Dovecot
     apt-get install dovecot-imapd dovecot-pop3d
     
+    # Stop Dovecot
+    service dovecot stop
+    
     # Get into the root home for keys
     cd /root && mkdir certs && cd certs
     
@@ -83,10 +86,9 @@ Mail Server
     # Dovecot passwords
     touch /etc/dovecot/passwd
     chmod 644 /etc/dovecot/passwd
-    doveadm pw
     
-    rm /etc/dovecot/passwd
-    ln -s /root/server-config/files/etc/dovecot/passwd /etc/dovecot/passwd
+    # Generate password and store it in the passwd file
+    echo "andrew@andrewbrereton.com:`doveadm pw`" > /etc/dovecot/passwd
     
     # Refresh aliases
     newaliases
@@ -116,8 +118,7 @@ Mail Server
     dovecot -F
     
     # Restart Dovecot
-    service dovecot restart
+    service dovecot start
     
     # Thunderbird connection settings
     # http://i.imgur.com/ihWAwAQ.png
-
