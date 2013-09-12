@@ -68,7 +68,7 @@ Mail Server
     
     # SASL for SMTP
     rm /etc/postfix/sasl/smtpd.conf
-    ln -s /root/server-config/etc/postfix/sasl/smtpd.conf /etc/postfix/sasl/smtpd.conf
+    ln -s /root/server-config/files/etc/postfix/sasl/smtpd.conf /etc/postfix/sasl/smtpd.conf
     
     # TLS cache
     mkdir /etc/postfix/tlscache
@@ -78,7 +78,7 @@ Mail Server
     touch /etc/dovecot/users
     chmod 644 /etc/dovecot/users
     rm /etc/dovecot/users
-    ln -s /root/server-config/etc/dovecot/users /etc/dovecot/users
+    ln -s /root/server-config/files/etc/dovecot/users /etc/dovecot/users
     
     # Dovecot passwords
     touch /etc/dovecot/passwd
@@ -86,7 +86,7 @@ Mail Server
     doveadm pw
     
     rm /etc/dovecot/passwd
-    ln -s /root/server-config/etc/dovecot/passwd /etc/dovecot/passwd
+    ln -s /root/server-config/files/etc/dovecot/passwd /etc/dovecot/passwd
     
     # Refresh aliases
     newaliases
@@ -94,23 +94,23 @@ Mail Server
     
     # 10-auth.conf
     rm /etc/dovecot/conf.d/10-auth.conf
-    ln -s /root/server-config/etc/dovecot/conf.d/10-auth.conf /etc/dovecot/conf.d/10-auth.conf
+    ln -s /root/server-config/files/etc/dovecot/conf.d/10-auth.conf /etc/dovecot/conf.d/10-auth.conf
     
     # 10-mail.conf
     rm /etc/dovecot/conf.d/10-mail.conf
-    ln -s /root/server-config/etc/dovecot/conf.d/10-mail.conf /etc/dovecot/conf.d/10-mail.conf
+    ln -s /root/server-config/files/etc/dovecot/conf.d/10-mail.conf /etc/dovecot/conf.d/10-mail.conf
     
     # 10-master.conf
     rm /etc/dovecot/conf.d/10-master.conf
-    ln -s /root/server-config/etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf
+    ln -s /root/server-config/files/etc/dovecot/conf.d/10-master.conf /etc/dovecot/conf.d/10-master.conf
     
     # 10-ssl.conf
     rm /etc/dovecot/conf.d/10-ssl.conf
-    ln -s /root/server-config/etc/dovecot/conf.d/10-ssl.conf /etc/dovecot/conf.d/10-ssl.conf
+    ln -s /root/server-config/files/etc/dovecot/conf.d/10-ssl.conf /etc/dovecot/conf.d/10-ssl.conf
     
     # auth-system.conf.ext
     rm /etc/dovecot/conf.d/auth-system.conf.ext
-    ln -s /root/server-config/etc/dovecot/conf.d/auth-system.conf.ext /etc/dovecot/conf.d/auth-system.conf.ext
+    ln -s /root/server-config/files/etc/dovecot/conf.d/auth-system.conf.ext /etc/dovecot/conf.d/auth-system.conf.ext
     
     # Test Dovecot by running it in the foreground to find any errors
     dovecot -F
