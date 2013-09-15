@@ -9,6 +9,7 @@ Website
     pecl install apc
     echo "extension=apc.so" > /etc/php5/mods-available/apc.ini
     php5enmod apc
+    a2enmod rewrite
     
     # Install
     cd /var/www
