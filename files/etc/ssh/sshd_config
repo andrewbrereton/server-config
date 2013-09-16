@@ -87,6 +87,5 @@ Subsystem sftp /usr/lib/openssh/sftp-server
 UsePAM yes
 
 PermitUserEnvironment no
-Cipher aes128-ctr,aes192-ctr,aes256-ctr
 ClientAliveInterval 300
 ClientAliveCountMax 0
