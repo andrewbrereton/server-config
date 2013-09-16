@@ -18,7 +18,7 @@ Ports: 22, 25, 80, 143, 443, 993, 995, 5222, 5269, 5280
     echo "andrewbrereton.com" > /etc/hostname
     
     # Pre-requisites
-    apt-get install fail2ban git
+    apt-get install git
     
     # Get this repo
     cd ~
