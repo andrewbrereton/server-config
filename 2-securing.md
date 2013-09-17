@@ -6,6 +6,7 @@ Securing
 
     # Pre-requisites
     apt-get update
+    apt-get upgrade
     apt-get install fail2ban
     
     # Create OpenSSH config
