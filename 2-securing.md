@@ -25,3 +25,6 @@ Securing
 
     rm /etc/apt/apt.conf.d/50unattended-upgrades
     ln -s /root/server-config/etc/apt/apt.conf.d/50unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades
+
+    # Restart unattended-upgrades script
+    service unattended-upgrades restart
