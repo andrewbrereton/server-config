@@ -20,6 +20,9 @@ Securing
     apt-get install unattended-upgrades
     
     # Create unattended-upgrades config
+    rm /etc/apt/apt.conf.d/10periodic
+    ln -s /root/server-config/etc/apt/apt.conf.d/10periodic /etc/apt/apt.conf.d/10periodic
+    
     rm /etc/apt/apt.conf.d/20auto-upgrades
     ln -s /root/server-config/etc/apt/apt.conf.d/20auto-upgrades /etc/apt/apt.conf.d/20auto-upgrades
 
