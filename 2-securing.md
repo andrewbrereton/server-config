@@ -21,13 +21,18 @@ Securing
     
     # Create unattended-upgrades config
     rm /etc/apt/apt.conf.d/10periodic
-    ln -s /root/server-config/etc/apt/apt.conf.d/10periodic /etc/apt/apt.conf.d/10periodic
+    ln -s /root/server-config/files/etc/apt/apt.conf.d/10periodic /etc/apt/apt.conf.d/10periodic
     
     rm /etc/apt/apt.conf.d/20auto-upgrades
-    ln -s /root/server-config/etc/apt/apt.conf.d/20auto-upgrades /etc/apt/apt.conf.d/20auto-upgrades
+    ln -s /root/server-config/files/etc/apt/apt.conf.d/20auto-upgrades /etc/apt/apt.conf.d/20auto-upgrades
 
     rm /etc/apt/apt.conf.d/50unattended-upgrades
-    ln -s /root/server-config/etc/apt/apt.conf.d/50unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades
+    ln -s /root/server-config/files/etc/apt/apt.conf.d/50unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades
 
     # Restart unattended-upgrades script
     service unattended-upgrades restart
+    
+    # Email logs to me
+    apt-get install logwatch
+    rm /etc/cron.daily/00logwatch
+    ln -s /root/server-config/files/etc/cron.daily/00logwatch /etc/cron.daily/00logwatch
