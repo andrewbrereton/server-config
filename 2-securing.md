@@ -14,3 +14,13 @@ Securing
     
     # Restart service
     service ssh restart
+    
+    # Auto upgrade security fixes
+    apt-get install unattended-upgrades
+    
+    # Create unattended-upgrades config
+    rm /etc/apt/apt.conf.d/20auto-upgrades
+    ln -s /root/server-config/etc/apt/apt.conf.d/20auto-upgrades /etc/apt/apt.conf.d/20auto-upgrades
+
+    rm /etc/apt/apt.conf.d/50unattended-upgrades
+    ln -s /root/server-config/etc/apt/apt.conf.d/50unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades
