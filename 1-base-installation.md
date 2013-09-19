@@ -17,6 +17,9 @@ Ports: 22, 25, 80, 143, 443, 993, 995, 5222, 5269, 5280
     # Hostname
     echo "andrewbrereton.com" > /etc/hostname
     
+    # Timezone
+    dpkg-reconfigure tzdata
+    
     # Pre-requisites
     apt-get install git
     
