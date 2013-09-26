@@ -39,4 +39,4 @@ Securing
 
     # SSL
     rm /etc/apache2/mods-enabled/ssl.conf
-    ln -s /root/server-config/files/etcetc/apache2/mods-enabled/ssl.conf /etc/apache2/mods-enabled/ssl.conf
+    ln -s /root/server-config/files/etcetc/apache2/mods-enabled/ssl.conf /etc/apache2/mods-available/ssl.conf
