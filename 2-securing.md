@@ -36,3 +36,7 @@ Securing
     apt-get install logwatch
     rm /etc/cron.daily/00logwatch
     ln -s /root/server-config/files/etc/cron.daily/00logwatch /etc/cron.daily/00logwatch
+
+    # SSL
+    rm /etc/apache2/mods-enabled/ssl.conf
+    ln -s /root/server-config/files/etcetc/apache2/mods-enabled/ssl.conf /etc/apache2/mods-enabled/ssl.conf
