@@ -33,39 +33,3 @@ On Android phone:
 4. User name: andrew
 5. Password: (Password that was used earlier to create htpasswd user)
 6. Preemptive authentication: true
-
-Install AgenDAV - a web based caldav client
-
-    mkdir /var/www/calendar.andrewbrereton.com
-    cd /var/www/calendar.andrewbrereton.com
-    git clone https://github.com/adobo/agendav.git .
-    
-    # Create database
-    mysql --default-character-set=utf8 -uroot -p
-    mysql> GRANT ALL PRIVILEGES ON agendav.* TO agendav@localhost IDENTIFIED BY 'yourpassword'
-    mysql> CREATE DATABASE agendav CHARACTER SET utf8 COLLATE utf8_general_ci;
-    mysql> FLUSH PRIVILEGES;
-    mysql> ^D
-    
-    # Create schema
-    mysql --default-character-set=utf8 -uagendav -p agendav < sql/mysql.schema.sql
-    
-    # Create Apache config
-    ln -s /root/server-config/files/etc/apache2/sites-available/calendar.andrewbrereton.com /etc/apache2/sites-available/calendar.andrewbrereton.com
-    
-    # Enable site
-    a2ensite calendar.andrewbrereton.com
-    
-    # Reload Apache
-    service apache2 reload
-
-    # Configuration
-    cp /root/server-config/files/var/www/calendar.andrewbrereton.com/web/config/* /var/www/calendar.andrewbrereton.com/web/config/
-
-    # Composer
-    cd /var/www/calendar.andrewbrereton.com/web
-    composer install
-    
-    # Permissions
-    chown -R www-data:www-data /var/www/calendar.andrewbrereton.com
-    chmod -R 777 /var/www/calendar.andrewbrereton.com/web/application/logs
