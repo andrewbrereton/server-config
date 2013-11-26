@@ -27,3 +27,7 @@ Ports: 22, 25, 80, 143, 443, 993, 995, 5222, 5269, 5280
     # Get this repo
     cd ~
     git clone https://github.com/andrewbrereton/server-config.git
+
+    # Composer
+    curl -sS https://getcomposer.org/installer | php
+    mv composer.phar /usr/local/bin/composer
