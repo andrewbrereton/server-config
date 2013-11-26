@@ -1,0 +1,34 @@
+# -*- mode: conf -*-
+# vim:ft=cfg
+
+[server]
+hosts = 0.0.0.0:5232
+daemon = True
+#pid =
+ssl = True
+certificate = /root/certs/andrewbrereton.com.crt
+key = /root/certs/andrewbrereton.com.key
+#dns_lookup = True
+
+[encoding]
+#request = utf-8
+#stock = utf-8
+
+[acl]
+type = htpasswd
+#public_users = public
+#private_users = private
+htpasswd_filename = /etc/radicale/users
+htpasswd_encryption = crypt
+
+[storage]
+#type = filesystem
+filesystem_folder = /var/lib/radicale/collections
+
+[logging]
+#config = /etc/radicale/logging
+#debug = False
+#full_environment = False
+
+[rights]
+type = owner_only
