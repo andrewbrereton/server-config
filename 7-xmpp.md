@@ -14,7 +14,7 @@ XMPP
 
     # Copy over config
     rm /etc/ejabberd/ejabberd.conf
-    ln -s /root/server-config/files/etc/ejabberd/ejabberd.conf /etc/ejabberd/ejabberd.conf
+    ln -s /server-config/files/etc/ejabberd/ejabberd.conf /etc/ejabberd/ejabberd.conf
     
     # Kill any existing running instances
     ps aux|grep -i ejabberd
