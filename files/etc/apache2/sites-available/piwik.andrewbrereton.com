@@ -5,14 +5,14 @@
 
 <VirtualHost *:443>
     SSLEngine on
-    SSLCertificateFile /root/certs/andrewbrereton.com.crt
-    SSLCertificateKeyFile /root/certs/andrewbrereton.com.key
-    SSLCACertificateFile /root/certs/andrewbrereton.com.pem
+    SSLCertificateFile /server-config/certs/andrewbrereton.com.crt
+    SSLCertificateKeyFile /server-config/certs/andrewbrereton.com.key
+    SSLCACertificateFile /server-config/certs/andrewbrereton.com.pem
     SSLProtocol all -SSLv2
     SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM
 
     ServerName piwik.andrewbrereton.com
-    ServerAdmin webmaster@piwik.andrewbrereton.com
+    ServerAdmin webmaster@andrewbrereton.com
 
     DocumentRoot /var/www/piwik.andrewbrereton.com
 
