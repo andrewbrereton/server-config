@@ -25,7 +25,7 @@ Ports: 22, 25, 80, 143, 443, 993, 995, 5222, 5269, 5280
     apt-get install git
     
     # Get this repo
-    cd ~
+    cd /
     git clone https://github.com/andrewbrereton/server-config.git
 
     # Composer
