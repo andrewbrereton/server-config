@@ -1,35 +1,42 @@
 CalDAV and CardDAV
 ==================
 
-    sudo apt-get update
-    sudo apt-get install radicale
+    cd /var/www
+    git clone https://github.com/jeromeschneider/Baikal.git baikal.andrewbrereton.com
+    cd baikal.andrewbrereton.com
+    composer install
+    chown -Rf www-data:www-data .
 
-    # Allow Radicale to be started at boot
-    rm /etc/default/radicale
-    ln -s /root/server-config/files/etc/default/radicale /etc/default/radicale
+    ln -s /root/server-config/files/etc/apache2/sites-available/baikal.andrewbrereton.com /etc/apache2/sites-available/baikal.andrewbrereton.com
     
-    # Configuration
-    rm /etc/radicale/config
-    ln -s /root/server-config/files/etc/radicale/config /etc/radicale/config
+    a2ensite baikal.andrewbrereton.com
+    service apache2 reload
     
-    # Create the user file
-    htpasswd -c -d /etc/radicale/users andrew
-    # Enter password
-    
-    # Start the service
-    /etc/init.d/radicale start
-    
-    # Create your calendar. Login using usernamd and password from htpasswd step
-    # Navigate to https://andrewbrereton.com:5232/andrew/calendar.ics/
-    
-    # Create your address book
-    # Navigate to https://andrewbrereton.com:5232/andrew/AddressBook.vcf/
+    # Create database
+    mysql --default-character-set=utf8 -uroot -p
+    mysql> GRANT ALL PRIVILEGES ON baikal.* TO baikal@localhost IDENTIFIED BY 'yourpassword';
+    mysql> CREATE DATABASE baikal CHARACTER SET utf8 COLLATE utf8_general_ci;
+    mysql> FLUSH PRIVILEGES;
+    mysql> ^D
 
+    # Navigate to https://baikal.andrewbrereton.com/admin/
+    # Configure via web admin interface
+    
+    # Navigate to https://baikal.andrewbrereton.com/admin/?/users/new/1/#form
+    # Create a new user
+    
 On Android phone:
 
 1. Download DAVdroid.
 2. Create new DAVdroid account
-3. Root URL: https://andrewbrereton.com:5232/andrew/
+3. Root URL: https://baikal.andrewbrereton.com/cal.php/principals/andrew
 4. User name: andrew
 5. Password: (Password that was used earlier to create htpasswd user)
-6. Preemptive authentication: true
+6. Preemptive authentication: false
+7. Add Calendar
+
+1. Create new DAVdroid account
+2. Root URL: https://baikal.andrewbrereton.com/card.php/principals/andrew
+3. User name: andrew
+4. Password: (Password that was used earlier to create htpasswd user)
+5. Preemptive authentication: false
