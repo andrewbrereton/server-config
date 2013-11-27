@@ -9,6 +9,9 @@ Securing
     apt-get upgrade
     apt-get install fail2ban
     
+    # Disable default Apache sites
+    a2dissite default default-ssl
+    
     # Create OpenSSH config
     rm /etc/ssh/sshd_config
     ln -s /server-config/files/etc/ssh/sshd_config /etc/ssh/sshd_config
