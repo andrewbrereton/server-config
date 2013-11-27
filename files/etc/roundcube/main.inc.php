@@ -358,7 +358,7 @@ $rcmail_config['email_dns_check'] = false;
 // ----------------------------------
 
 // List of active plugins (in plugins/ directory)
-$rcmail_config['plugins'] = array('fail2ban');
+$rcmail_config['plugins'] = array('contextmenu', 'fail2ban', 'plugin_manager');
 
 // ----------------------------------
 // USER INTERFACE
