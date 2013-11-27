@@ -7,7 +7,7 @@ CalDAV and CardDAV
     composer install
     chown -Rf www-data:www-data .
 
-    ln -s /root/server-config/files/etc/apache2/sites-available/baikal.andrewbrereton.com /etc/apache2/sites-available/baikal.andrewbrereton.com
+    ln -s /server-config/files/etc/apache2/sites-available/baikal.andrewbrereton.com /etc/apache2/sites-available/baikal.andrewbrereton.com
     
     a2ensite baikal.andrewbrereton.com
     service apache2 reload
