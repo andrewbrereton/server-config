@@ -3,6 +3,43 @@ Webmail
 
     # Root
     sudo su
+    
+    # Install stuff
+    apt-get install mysql-server
+    # New password for the MySQL "root" user: <PICK A STRONG PASSWORD>
+    
+    # Install Roundcube
+    cd /tmp
+    wget https://github.com/roundcube/roundcubemail/archive/v0.9.5.zip
+    unzip v0.9.5.zip
+    mv roundcubemail-0.9.5/ /var/www/webmail.andrewbrereton.com
+    rm v0.9.5.zip
+    chmod -R 777 /var/www/webmail.andrewbrereton.com/temp/ /var/www/webmail.andrewbrereton.com/logs/
+    
+    # Create database
+    mysql --default-character-set=utf8 -uroot -p
+    mysql> GRANT ALL PRIVILEGES ON roundcube.* TO roundcube@localhost IDENTIFIED BY 'SUPERSTRONGPASSWORD';
+    mysql> CREATE DATABASE roundcube CHARACTER SET utf8 COLLATE utf8_general_ci;
+    mysql> FLUSH PRIVILEGES;
+    mysql> ^D
+
+    # Roundcube Apache config
+    ln -s /server-config/files/etc/apache2/sites-available/webmail.andrewbrereton.com /etc/apache2/sites-available/webmail.andrewbrereton.com
+    
+    # Enable Apache modules
+    a2enmod ssl
+
+    # Restart Apache    
+    service apache2 reload
+
+    # Navigate to https://webmail.andrewbrereton.com/installer/
+    # Configure 
+    
+
+
+
+    # Root
+    sudo su
 
     # Install stuff
     apt-get install mysql-server roundcube roundcube-mysql roundcube-plugins-extra
