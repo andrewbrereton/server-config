@@ -6,17 +6,17 @@
     SSLProtocol all -SSLv2
     SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM
 
-    ServerName www.calendar.andrewbrereton.com
-    ServerAlias calendar.andrewbrereton.com
+    ServerName www.baikal.andrewbrereton.com
+    ServerAlias baikal.andrewbrereton.com
     ServerAdmin webmaster@andrewbrereton.com
 
-    DocumentRoot /var/www/calendar.andrewbrereton.com/html
+    DocumentRoot /var/www/baikal.andrewbrereton.com/html
 
     DirectoryIndex index.php
 
-    <Directory /var/www/calendar.andrewbrereton.com/html>
+    <Directory /var/www/baikal.andrewbrereton.com/html>
         Options Indexes FollowSymLinks MultiViews
-        AllowOverride None
+        AllowOverride All
         Order allow,deny
         Allow from All
         <IfModule mod_rewrite.c>
