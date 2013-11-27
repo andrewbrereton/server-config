@@ -6,8 +6,8 @@ hosts = 0.0.0.0:5232
 daemon = True
 #pid =
 ssl = True
-certificate = /root/certs/andrewbrereton.com.crt
-key = /root/certs/andrewbrereton.com.key
+certificate = /server-config/certs/andrewbrereton.com.crt
+key = /server-config/certs/andrewbrereton.com.key
 #dns_lookup = True
 
 [encoding]
