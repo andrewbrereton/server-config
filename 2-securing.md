@@ -43,3 +43,6 @@ Securing
     # SSL
     rm /etc/apache2/mods-available/ssl.conf
     ln -s /server-config/files/etcetc/apache2/mods-available/ssl.conf /etc/apache2/mods-available/ssl.conf
+    
+    # Enable Apache modules
+    a2enmod ssl
