@@ -9,8 +9,8 @@ XMPP
     
     # Copy over custom init script
     rm /etc/init.d/ejabberd
-    ln -s /root/server-config/files/etc/init.d/ejabberd /etc/init.d/ejabberd
-    chmod 777 /root/server-config/files/etc/init.d/ejabberd
+    ln -s /server-config/files/etc/init.d/ejabberd /etc/init.d/ejabberd
+    chmod 777 /server-config/files/etc/init.d/ejabberd
 
     # Copy over config
     rm /etc/ejabberd/ejabberd.conf
