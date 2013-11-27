@@ -1,8 +1,8 @@
 <VirtualHost *:443>
     SSLEngine on
-    SSLCertificateFile /root/certs/andrewbrereton.com.crt
-    SSLCertificateKeyFile /root/certs/andrewbrereton.com.key
-    SSLCACertificateFile /root/certs/andrewbrereton.com.pem
+    SSLCertificateFile /certs/andrewbrereton.com.crt
+    SSLCertificateKeyFile /certs/andrewbrereton.com.key
+    SSLCACertificateFile /certs/andrewbrereton.com.pem
     SSLProtocol all -SSLv2
     SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM
 
