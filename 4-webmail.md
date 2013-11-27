@@ -41,6 +41,7 @@ Webmail
     mv -f carddav /var/www/webmail.andrewbrereton.com/plugins/
     rm -Rf v0.5.zip
     mysql -uroot -p roundcube < /var/www/webmail.andrewbrereton.com/plugins/carddav/SQL/mysql.sql
+    cp /var/www/webmail.andrewbrereton.com/plugins/carddav/config.inc.php.dist /var/www/webmail.andrewbrereton.com/plugins/carddav/config.inc.php
 
     # Navigate to https://webmail.andrewbrereton.com/installer/
     # Configure 
