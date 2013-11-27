@@ -19,7 +19,7 @@ Piwik
     chmod -R 0755 /var/www/piwik.andrewbrereton.com/tmp
     
     # Configure site
-    ln -s /root/server-config/files/etc/apache2/sites-available/piwik.andrewbrereton.com /etc/apache2/sites-available/piwik.andrewbrereton.com
+    ln -s /server-config/files/etc/apache2/sites-available/piwik.andrewbrereton.com /etc/apache2/sites-available/piwik.andrewbrereton.com
     a2ensite piwik.andrewbrereton.com
     service apache2 reload
     
