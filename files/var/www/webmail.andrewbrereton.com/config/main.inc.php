@@ -411,7 +411,7 @@ $rcmail_config['no_save_sent_messages'] = false;
 // ----------------------------------
 
 // List of active plugins (in plugins/ directory)
-$rcmail_config['plugins'] = array('archive', 'emoticons', 'markasjunk', 'newmail_notifier', 'show_additional_headers', 'zipdownload');
+$rcmail_config['plugins'] = array('archive', 'emoticons', 'markasjunk', 'newmail_notifier', 'show_additional_headers', 'zipdownload', 'Roundcube-CardDAV-0.5');
 
 // ----------------------------------
 // USER INTERFACE
