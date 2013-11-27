@@ -35,11 +35,11 @@ Webmail
 
     # Add carddav plugin
     cd /tmp
-    wget https://github.com/graviox/Roundcube-CardDAV/archive/v0.5.zip
-    unzip v0.5.zip
-    mv -f Roundcube-CardDAV-0.5 carddav
-    mv -f carddav /var/www/webmail.andrewbrereton.com/plugins/
-    rm -Rf v0.5.zip
+    wget https://github.com/daiw/Roundcube-CardDAV/archive/16181afb2d390452f68151ea17d7db4f9fdd578a.zip
+    unzip 16181afb2d390452f68151ea17d7db4f9fdd578a.zip
+    mv -f Roundcube-CardDAV-* carddav
+    mv carddav /var/www/webmail.andrewbrereton.com/plugins/
+    rm 16181afb2d390452f68151ea17d7db4f9fdd578a.zip
     mysql -uroot -p roundcube < /var/www/webmail.andrewbrereton.com/plugins/carddav/SQL/mysql.sql
     cp /var/www/webmail.andrewbrereton.com/plugins/carddav/config.inc.php.dist /var/www/webmail.andrewbrereton.com/plugins/carddav/config.inc.php
 
