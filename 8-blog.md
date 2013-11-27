@@ -22,14 +22,14 @@ Blog
   # Composer
   cd /var/www/blog.andrewbrereton.com
   curl -sS https://getcomposer.org/installer | php
-  php composer.phar install
+  composer install
   
   # Configs
   rm /var/www/blog.andrewbrereton.com/conf/production.conf.php
-  ln -s /root/server-config/files/var/www/blog.andrewbrereton.com/conf/production.conf.php /var/www/blog.andrewbrereton.com/conf/production.conf.php
+  ln -s /server-config/files/var/www/blog.andrewbrereton.com/conf/production.conf.php /var/www/blog.andrewbrereton.com/conf/production.conf.php
 
   rm /etc/apache2/sites-available/blog.andrewbrereton.com
-  ln -s /root/server-config/files/etc/apache2/sites-available/blog.andrewbrereton.com /etc/apache2/sites-available/blog.andrewbrereton.com
+  ln -s /server-config/files/etc/apache2/sites-available/blog.andrewbrereton.com /etc/apache2/sites-available/blog.andrewbrereton.com
 
   # Let's go live
   a2ensite blog.andrewbrereton.com
